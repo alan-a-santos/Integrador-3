@@ -1,0 +1,19 @@
+# node_modules e dist: arquivos de dependências e build
+node_modules
+dist
+
+# arquivos de build do Next.js
+.next
+out
+
+# arquivos de ambiente (NUNCA subir para o GitHub)
+.env
+.env.local
+
+# arquivos de log e cache
+*.log
+.cache
+
+# pastas de editor
+.vscode
+.idea
