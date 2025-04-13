@@ -19,4 +19,4 @@ out
 .idea
 
 #informaçaões do banco de dados
-.bd_config
+backend/src/bd_config/conexao.ts
