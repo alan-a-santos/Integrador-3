@@ -17,3 +17,6 @@ out
 # pastas de editor
 .vscode
 .idea
+
+#informaçaões do banco de dados
+.bd_config
