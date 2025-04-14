@@ -2,7 +2,8 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "../../src/styles/Clientes.css";
-import { server } from "../../src/service/server";
+import { server } from "@/service/server";
+
 
 interface Clientes_Props {
   nome: string;
@@ -78,7 +79,7 @@ function Consulta_cliente() {
   }
 
   async function nomes_clientes() {
-    const response = await server.get("/servicos_diversos/lista_clientes");
+    const response = await server .get("/servicos_diversos/lista_clientes");
     setClientes(response.data);
   }
 

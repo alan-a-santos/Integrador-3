@@ -9,13 +9,19 @@
       async execute({ usuario, senha }: dados_acesso) {
           const query = "SELECT * FROM usuarios WHERE usuario = ?";
               const [pesq]: any = await conexao.execute(query,[usuario]);
+
+              if (pesq.length == 0){
+                resposta = "Negado"
+                return resposta
+              }
               const user = pesq[0]
 
-              if (user.senha == senha){
+              if (user.senha == senha && user.usuario == usuario){
                 resposta="Autorizado"
               }else{
                 resposta = "Negado"
               }                   
+      
               return resposta
         }}
   export { login_usuario };

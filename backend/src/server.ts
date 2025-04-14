@@ -4,7 +4,7 @@ import cors from "@fastify/cors";
 import dotenv from "dotenv";
 dotenv.config()
 
-export const server = fastify({ logger: true})
+export const server = fastify({ logger: false})
 
 server.register(cors, {
     origin: '*'  // Permitir todas as origens. Ajuste conforme necessário.
