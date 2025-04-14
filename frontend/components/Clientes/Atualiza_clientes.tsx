@@ -273,7 +273,7 @@ function Atualiza_cliente() {
             type="text"
             id="input110"
             className="inputs"
-            name="complemeto"
+            name="complemento"
             value={clienteInfo?.complemento || ""}
             onChange={handleInputChange}
           />

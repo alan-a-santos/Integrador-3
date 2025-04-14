@@ -26,13 +26,19 @@ function Receber_financeiro() {
 
   async function nomes_devedores() {
     try {
-      // const response = await server.get("/servicos_diversos/lista_clientes");
       const response = await server.post("/servicos_diversos/nomes_devedores", {
         situacao: "a pagar",
       });
-      setclientes(response.data);
-
-    } catch  {
+  
+      // Filtra clientes únicos pelo id
+      const clientesUnicos = response.data.filter(
+        (cliente: cliente, index: number, self: cliente[]) =>
+          index === self.findIndex((c) => c.id === cliente.id)
+      );
+  
+      setclientes(clientesUnicos);
+  
+    } catch {
       console.error("Erro ao buscar clientes:");
     }
   }
@@ -96,6 +102,7 @@ function Receber_financeiro() {
         situacao: "pago",
       });
       atualiza_pedido();
+      nomes_devedores()
     } catch {}
   };
 
@@ -106,6 +113,7 @@ function Receber_financeiro() {
         situacao: "pago",
       });
       atualiza_pedido();
+      nomes_devedores()
     } catch {}
   };
 

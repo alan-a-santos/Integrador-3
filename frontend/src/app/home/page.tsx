@@ -1,3 +1,4 @@
+'use client'  
 import React from 'react'
 import Superior from '../../../components/Sessoes/Superior'
 import Home from '../../../components/Sessoes/Home'

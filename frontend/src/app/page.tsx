@@ -31,7 +31,9 @@ function Login() {
       })
 
       if (response.data === 'Autorizado') {
-        router.push('/home') // navegação com Next
+        window.location.href = "/home"
+        // router.push('/home') // navegação com Next
+        // router.refresh() 
       } else {
         alert("Usuário e/ou senha inválidos")
       }

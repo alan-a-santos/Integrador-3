@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../src/styles/Oferta_cardapio.css";
 import { server } from "@/service/server";
+
 
 interface Categoria_Props {
   categorias: string;
@@ -18,6 +19,11 @@ function Oferta_cardapio() {
   const [valor, setvalor] = useState("");
   const [resposta, setResposta] = useState<{ mensagem: string } | null>(null);
   const [resumo, setResumo] = useState<string[]>([])
+
+  
+useEffect(() => {
+  carregarOfertasDoDia();
+}, []);
 
   const segmentar = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setsegmento(event.target.value);
@@ -47,6 +53,19 @@ function Oferta_cardapio() {
       );
     } catch {}
   };
+
+  async function carregarOfertasDoDia() {
+    try {
+      const response = await server.get("/servicos_diversos/lista_ofertas", {
+        params: { data: formattedDate },
+      });
+  
+      const ofertas = response.data.map((item: any) => `${item.nome_prato} - R$ ${item.valor}`);
+      setResumo(ofertas);
+    } catch (error) {
+      console.error("Erro ao buscar ofertas do dia:", error);
+    }
+  }
 
   const timeElapsed = Date.now();
   const currentDate = new Date(timeElapsed);
@@ -80,12 +99,12 @@ function Oferta_cardapio() {
       console.error("Erro ao atualizar os dados:", error);
     }
     
-      try {
-        const response = await server.get("/servicos_diversos/lista_ofertas");
-      console.log(response.data)
-      } catch (error) {
-        console.error("Erro ao buscar clientes:", error);
-      }
+      // try {
+      //   const response = await server.get("/servicos_diversos/lista_ofertas");
+      // console.log(response.data)
+      // } catch (error) {
+      //   console.error("Erro ao buscar clientes:", error);
+      // }
   }
 
    

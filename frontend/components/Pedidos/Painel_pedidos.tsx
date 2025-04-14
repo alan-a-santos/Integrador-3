@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import "../../src/styles/Painel_pedido.css";
 import { server } from "@/service/server";
 
+
 interface dados {
   pedido: string;
   observacao: string;
@@ -18,6 +19,7 @@ function Painel_pedidos() {
   const [pedidosProntos, setPedidosProntos] = useState<dados[]>([]);
   const [, setconsultas] = useState<{ id: number; pedido: string }[]>([]);
   const [, setSelectedIds] = useState<number[]>([]);
+  const [detalhePedido, setDetalhePedido] = useState<string>("");
 
   // Função para buscar situações de acordo com o segmento selecionado
   const buscarSituacoes = useCallback(
@@ -25,36 +27,38 @@ function Painel_pedidos() {
       try {
         const response = await server.get("/servicos_diversos/lista_situacao", {
           params: { segmento: segmentoAtual },
+
         });
         const data = response.data;
-        console.log(segmento);
-  
+       // console.log(segmento);
         // Filter and set orders by status
         setPedidosEmPreparo(
           data.filter(
             (pedido: { situacao: string; segmento: string }) =>
-              pedido.situacao === "em preparo" && pedido.segmento === segmento
+              pedido.situacao === "em preparo" && pedido.segmento === segmentoAtual
           )
         );
         setPedidosProntos(
           data.filter(
             (pedido: { situacao: string; segmento: string }) =>
-              pedido.situacao === "pronto" && pedido.segmento === segmento
+              pedido.situacao === "pronto" && pedido.segmento === segmentoAtual
           )
         );
   
-        setSituacoes(data);
-        console.log(pedidosEmPreparo);
+        //setSituacoes(data);
+        //console.log(pedidosEmPreparo);
       } catch (error) {
         console.error("Erro ao buscar situações:", error);
       }
-    },
-    [segmento, setPedidosEmPreparo, setPedidosProntos, setSituacoes, pedidosEmPreparo] // Include pedidosEmPreparo as a dependency
+    },[]
+    //[segmento, setPedidosEmPreparo, setPedidosProntos, setSituacoes, pedidosEmPreparo] // Include pedidosEmPreparo as a dependency
   );
   
   useEffect(() => {
     buscarSituacoes(segmento);
-  }, [buscarSituacoes, segmento]);
+    setDetalhePedido("")
+  }, [segmento, buscarSituacoes, ]);
+  
 
   const finaliza = async (event: React.MouseEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(event.currentTarget.selectedOptions);
@@ -100,23 +104,39 @@ function Painel_pedidos() {
       Number(option.value.match(/\d+/)?.[0])
     );
     setSelectedIds(ids);
-
+  
     try {
       const response = await server.post("/pedidos/consulta", {
         id: ids[0],
       });
       const data = response.data;
       setconsultas(data.consultas || []);
+  
+      const consulta = data.consultas?.[0];
+      if (consulta) {
+        const pedidoFormatado = consulta.pedido
+          ?.replace(/[\[\]"]+/g, "")
+          .trim();
+  
+        const observacaoFormatada = consulta.observacao
+          ?.replace(/[\[\]"]+/g, "")
+          .trim();
+  
+        setDetalhePedido(
+          `Pedido: ${pedidoFormatado || "Nenhum"}\n \nObservação: ${observacaoFormatada || "Nenhuma"}`
+        );
+      }
     } catch {
       console.log("não encontrado");
     }
   };
-
+  
   const handleSegmentoChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const novoSegmento = event.target.value;
     setSegmento(novoSegmento);
+    setDetalhePedido("")
   };
 
   return (
@@ -156,6 +176,13 @@ function Painel_pedidos() {
                 </option>
               ))}
             </select>
+            <div id="detalhe">
+              <label htmlFor="" id="label_detalhe" className="labels">Detalhe do Pedido</label>
+         </div>     
+         <div>
+              <textarea name="" id="detalhe_pedido" className="inputs"  value={detalhePedido}
+  readOnly></textarea>
+            </div>
           </fieldset>
 
           <fieldset className="pronto">
@@ -176,7 +203,9 @@ function Painel_pedidos() {
                 </option>
               ))}
             </select>
+        
           </fieldset>
+         
         </div>
 
         {/* <label htmlFor="pedidoobs" id="pedidoobs" className="labels">Observações do Pedido</label> */}

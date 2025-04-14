@@ -123,3 +123,13 @@
 .preparo{
     border: none;
 }
+#detalhe{
+    margin-top: 2vh;
+    
+}
+#detalhe_pedido{
+    width: 35vw;
+    height: 15vh;
+    padding-top: 2vh;
+}
+    

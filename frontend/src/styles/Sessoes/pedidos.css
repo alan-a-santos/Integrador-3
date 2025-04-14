@@ -88,7 +88,7 @@
     margin-top: 21vh;
     margin-left: -14.8vw;
     
-    width: 13vw;
+    width: 15vw;
     height: 6vh;
     font-size: 6vh;
     text-align: center;
@@ -167,4 +167,7 @@ width: 8vw;
     width: 5vw;
     margin-right: 8.5vw;
 
+}
+#label_detalhe{
+    margin-top: 10vh;
 }

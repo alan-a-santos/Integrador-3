@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "../../src/styles/Sessoes/pedidos.css";
-import { server } from "@/service/server";
 import { useCliente } from "./ClienteContext";
+import { server } from "@/service/server";
 
 interface itens {
   segmento: string;
