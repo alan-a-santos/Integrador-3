@@ -1,22 +1,41 @@
-# node_modules e dist: arquivos de dependências e build
-node_modules
-dist
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# arquivos de build do Next.js
-.next
-out
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# arquivos de ambiente (NUNCA subir para o GitHub)
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+#env. backend
 .env
 .env.local
 
-# arquivos de log e cache
-*.log
-.cache
-
-# pastas de editor
-.vscode
-.idea
-
-#informaçaões do banco de dados
-backend/src/bd_config/conexao.ts

@@ -19,16 +19,19 @@ function Login() {
     const senha = senharef.current?.value
 
 
+    
+
     if (!usuario || !senha) {
       return alert("Informe usuário e senha.")
     }
-
+   
     try {
       const response = await server.post('/', {
         usuario,
-        senha
+        senha,
+     
       })
-
+ 
       if (response.data === 'Autorizado') {
         window.location.href = "/home"
         }
@@ -39,7 +42,7 @@ function Login() {
 
     } catch (error) {
       console.error("Erro ao tentar logar:", error)
-      alert("Erro ao conectar com o servidor")
+      alert("Erro ao conectar ao banco de dados")
     }
   }
 

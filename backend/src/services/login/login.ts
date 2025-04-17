@@ -21,7 +21,7 @@
               }else{
                 resposta = "Negado"
               }                   
-      
+              console.log(resposta)
               return resposta
         }}
   export { login_usuario };
