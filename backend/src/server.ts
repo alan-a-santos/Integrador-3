@@ -1,8 +1,12 @@
 import fastify from "fastify";
 import { routes } from "./routes";
 import cors from "@fastify/cors";
+import fastifyStatic from "@fastify/static";
+import path from "path";
 import dotenv from "dotenv";
+
 dotenv.config()
+
 
 export const server = fastify({ logger: false})
 
@@ -10,6 +14,24 @@ server.register(cors, {
     origin: '*'  , // Permitir todas as origens. Ajuste conforme necessário.
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   });
+
+  // server.register(fastifyStatic, {
+  //   root: path.join(process.cwd(), '../frontend/out'),
+  //   //root: path.join(process.cwd(), 'frontend', 'out'),
+  //   prefix: '/', // Serve os arquivos na raiz
+  // });
+
+  // server.get('/', (request, reply) => {
+  //   const indexPath = path.join(process.cwd(), '../frontend/out/index.html');
+  //   if (fs.existsSync(indexPath)) {
+  //     reply.sendFile('index.html');
+  //   } else {
+  //     reply.code(404).send('index.html não encontrado');
+  //   }
+  // });
+  // server.get('/', (request, reply) => {
+  //   reply.sendFile('index.html');
+  // });
 
 server.register(routes)
 
