@@ -21,7 +21,7 @@ function Cadastro_fitness() {
   const [pratos, setPratos] = useState<itens[]>([]);
   const [, setitem] = useState("");
   const [pedido, setPedido] = useState<itens[]>([]);
-  
+   const [total, setTotal] = useState<number>(0);
   const [valor, setvalor] = useState<number>(0);
   const [itemSelecionado, setItemSelecionado] = useState<string | null>(null);
   const [observa, setobserva] = useState("");
@@ -127,6 +127,12 @@ function Cadastro_fitness() {
       });
 
       console.log("Pedido enviado:", response.data);
+      setitem("");
+      setPedido([]);
+      setTotal(0);
+      setItemSelecionado(null);
+      setobserva("");
+      setdata("");
     } catch (error) {
       console.error("Erro ao enviar pedido:", error);
     }

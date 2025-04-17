@@ -7,7 +7,8 @@ dotenv.config()
 export const server = fastify({ logger: false})
 
 server.register(cors, {
-    origin: '*'  // Permitir todas as origens. Ajuste conforme necessário.
+    origin: '*'  , // Permitir todas as origens. Ajuste conforme necessário.
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   });
 
 server.register(routes)

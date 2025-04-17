@@ -93,7 +93,16 @@ function Atualiza_cliente() {
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+
+    if (name === "cpf") {
+      value = value.replace(/[^\d]/g, ""); // remove pontuação
+    }
+  
+    if (name === "cep") {
+      value = value.replace(/[^\d]/g, ""); // remove hífen
+    }
+  
     setClienteInfo((prevInfo) =>
       prevInfo ? { ...prevInfo, [name]: value } : null
     );
@@ -109,7 +118,7 @@ function Atualiza_cliente() {
       } catch (error) {
         console.error("Erro ao atualizar cliente:", error);
         await server.put("/clientes/atualiza", clienteInfo);
-        setSuccessMessage("Não ha atulizações a serm realizadas !");
+        setSuccessMessage("Não ha atulizações a serem realizadas !");
         setTimeout(() => {
           setSuccessMessage(null);
         }, 3000);
@@ -117,6 +126,24 @@ function Atualiza_cliente() {
       }
     }
   };
+  //   if (clienteInfo) {
+  //     try {
+  //       await server.put("/clientes/atualiza", clienteInfo);
+  //       setSuccessMessage("Cadastro Atualizado com sucesso!");
+  //       setTimeout(() => {
+  //         setSuccessMessage(null);
+  //       }, 3000);
+  //     } catch (error) {
+  //       console.error("Erro ao atualizar cliente:", error);
+  //       await server.put("/clientes/atualiza", clienteInfo);
+  //       setSuccessMessage("Não ha atulizações a serem realizadas !");
+  //       setTimeout(() => {
+  //         setSuccessMessage(null);
+  //       }, 3000);
+  
+  //     }
+  //   }
+  // };
 
   return (
     <div className="cliente">
