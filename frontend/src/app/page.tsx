@@ -18,7 +18,7 @@ function Login() {
     const usuario = usuarioref.current?.value
     const senha = senharef.current?.value
 
-
+console.log(usuario, senha) 
     
 
     if (!usuario || !senha) {
