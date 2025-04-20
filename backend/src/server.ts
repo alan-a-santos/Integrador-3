@@ -24,7 +24,7 @@ const start = async (): Promise<void> => {
     try {
      
       await server.listen({ port , host: '0.0.0.0' });
-      console.log('Servidor Conectado'); // Log de sucesso
+      console.log('Servidor Conectado na porta', port); // Log de sucesso
     } catch (err) {
       server.log.error('Erro ao iniciar o servidor:', err); 
       process.exit(1);

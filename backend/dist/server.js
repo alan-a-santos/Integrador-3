@@ -22,7 +22,7 @@ const port = Number(process.env.PORT) || 3001; // Defina a porta padrão como 30
 const start = async () => {
     try {
         await exports.server.listen({ port, host: '0.0.0.0' });
-        console.log('Servidor Conectado'); // Log de sucesso
+        console.log('Servidor Conectado na porta', port); // Log de sucesso
     }
     catch (err) {
         exports.server.log.error('Erro ao iniciar o servidor:', err);

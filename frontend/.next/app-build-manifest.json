@@ -1,3 +1,46 @@
 {
-  "pages": {}
+  "pages": {
+    "/home/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/home/page.css",
+      "static/chunks/app/home/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/clientes/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/clientes/page.css",
+      "static/chunks/app/clientes/page.js"
+    ],
+    "/clientes/cadastro/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/clientes/cadastro/page.css",
+      "static/chunks/app/clientes/cadastro/page.js"
+    ],
+    "/clientes/consulta/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/clientes/consulta/page.css",
+      "static/chunks/app/clientes/consulta/page.js"
+    ],
+    "/clientes/atualiza/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/clientes/atualiza/page.css",
+      "static/chunks/app/clientes/atualiza/page.js"
+    ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ]
+  }
 }

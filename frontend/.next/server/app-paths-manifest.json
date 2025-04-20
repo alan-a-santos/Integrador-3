@@ -1,1 +1,8 @@
-{}
+{
+  "/home/page": "app/home/page.js",
+  "/clientes/cadastro/page": "app/clientes/cadastro/page.js",
+  "/clientes/page": "app/clientes/page.js",
+  "/clientes/atualiza/page": "app/clientes/atualiza/page.js",
+  "/clientes/consulta/page": "app/clientes/consulta/page.js",
+  "/page": "app/page.js"
+}
