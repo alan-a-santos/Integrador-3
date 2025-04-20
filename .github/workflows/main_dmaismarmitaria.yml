@@ -24,7 +24,7 @@ jobs:
           node-version: '22.x'
 
       - name: Instalar dependências, construir e testar
-        working-directory: Projeto-Integrador-3
+     
         run: |
           npm install
           npm run build --if-present
@@ -32,7 +32,7 @@ jobs:
 
       - name : Artefato Zip para implantação
         run: zip -r release.zip ./
-        working-directory: Projeto-Integrador-3
+ 
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
