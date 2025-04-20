@@ -18,7 +18,7 @@ exports.server.register(cors_1.default, {
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 });
 exports.server.register(routes_1.routes);
-const port = Number(process.env.PORT) || 3001; // Defina a porta padrão como 3001 se não estiver definida no .env
+const port = Number(process.env.PORT) || 8080; // Defina a porta padrão como 8080 se não estiver definida no .env
 const start = async () => {
     try {
         await exports.server.listen({ port, host: '0.0.0.0' });

@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
     "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && tsc",
-   
-    "start": "concurrently \"npm run start --prefix backend\" \"npm run dev --prefix frontend\""
+    "start": "node server.js",
+    "rodar": "concurrently \"npm run start --prefix backend\" \"npm run dev --prefix frontend\""
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
