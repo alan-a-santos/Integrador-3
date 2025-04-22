@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../src/styles/Sessoes/dados_clientes.css";
+//import "../../src/styles/Sessoes/dados_clientes.css";
 import { useState, useEffect } from "react";
 import { server } from "../../src/service/server";
 import { useCliente } from "../Pedidos/ClienteContext";

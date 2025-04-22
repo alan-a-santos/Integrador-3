@@ -1,5 +1,5 @@
 import React from "react";
-import "../../src/styles/Historico_pedidos.css";
+//import "../../src/styles/Historico_pedidos.css";
 
 function Historico_pedido() {
   return (

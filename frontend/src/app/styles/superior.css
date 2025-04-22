@@ -1,0 +1,20 @@
+.superior{
+    background-color: #2B4C5D;
+    height: 10vh;
+    display: flex;
+
+}
+
+#superior_logo{
+    width: 5vw;
+    height: 10vh;
+}
+
+#titulo{
+    font-size: 5vh;
+    text-align: center;
+    background-color: #2B4C5D;
+    color: white;
+    margin-left: 20vw;
+
+}

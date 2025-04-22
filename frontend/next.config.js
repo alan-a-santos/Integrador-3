@@ -1,15 +1,10 @@
-// module.exports = {
-//     reactStrictMode: true,
-//     // Não use output: export
-//   };
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//     output: 'export', // 👈 ESSENCIAL!
-//   };
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    output: 'export',
+    trailingSlash: true, // <-
+    images: {
+      unoptimized: true, // Necessário para exportação estática
+    },
+  };
   
-//   export default nextConfig;
-
-    // module.exports = {
-    //     output: 'export',
-    //   };
+  module.exports = nextConfig;

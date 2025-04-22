@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "../../src/styles/Oferta_cardapio.css";
+//import "../../src/styles/Oferta_cardapio.css";
 import { server } from "@/service/server";
 
 

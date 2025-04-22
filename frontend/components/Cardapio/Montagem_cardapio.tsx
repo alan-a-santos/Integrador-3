@@ -1,6 +1,6 @@
 "use client";
 import React, {  useState } from "react";
-import "../../src/styles/Montagem_cardapio.css";
+//import "../../src/styles/Montagem_cardapio.css";
 import { server } from "@/service/server";
 
 interface Categoria_Props {

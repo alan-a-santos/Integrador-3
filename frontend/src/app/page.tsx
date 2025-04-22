@@ -4,12 +4,13 @@ import React, { FormEvent, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import logo from '../../public/image/Logo.jpg'
-import '../styles/Sessoes/login.css'
+//import '../styles/Sessoes/login.css'
 import { server } from '@/service/server'
 
 function Login() {
   const usuarioref = useRef<HTMLInputElement | null>(null)
   const senharef = useRef<HTMLInputElement | null>(null)
+  const router = useRouter()
  
 
   async function logar(event: FormEvent) {
@@ -32,8 +33,9 @@ console.log(usuario, senha)
      
       })
  
-      if (response.data === 'Autorizado') {
-        window.location.href = "/home"
+      if (response.data === 'Autorizado' || response.data.status === 'Autorizado') {
+        localStorage.setItem('autenticado', 'true')
+        router.push('/home/')
         }
        else {
         (response.data === 'Negado')
@@ -47,26 +49,26 @@ console.log(usuario, senha)
   }
 
   return (
-    <div className='login' id='div1'>
+    <div className='login'>
       <Image src={logo} alt="Logo da empresa" id='logo' priority />
       <form id='acesso' onSubmit={logar}>
         <input
           type="text"
           name="usuario"
-          id="usuario"
-          className='inputs'
+          id="login_usuario"
+          className='login_inputs'
           placeholder='Usuário'
           ref={usuarioref}
         />
         <input
           type="password"
           name="senha"
-          id="senha"
-          className='inputs'
+          id="login_senha"
+          className='login_inputs'
           placeholder='Senha'
           ref={senharef}
         />
-        <button type="submit" id='btentrar'>Entrar</button>
+        <button type="submit" id='login_entrar'>Entrar</button>
       </form>
     </div>
   )

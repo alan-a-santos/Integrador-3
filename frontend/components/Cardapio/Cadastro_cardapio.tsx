@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "../../src/styles/Cadastro_cardapio.css";
+//import "../../src/styles/Cadastro_cardapio.css";
 import { server } from "@/service/server";
 
 function Cadastro_cardapio() {

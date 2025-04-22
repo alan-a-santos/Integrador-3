@@ -11,7 +11,7 @@ function page() {
       <Superior/>
      <Home/>
       <Principal/>
-       <Home_painel/>
+       {/* <Home_painel/> */}
     </>
   )
 }

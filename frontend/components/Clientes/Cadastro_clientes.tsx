@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, FormEvent, useState, useEffect } from "react";
-import "../../src/styles/Clientes.css";
+//import "../../src/styles/Clientes.css";
 import { server } from "../../src/service/server";
 import axios from "axios";
 
@@ -122,7 +122,7 @@ function Cadastro_clientes() {
 
   return (
     <div className="cliente">
-      <h1 id="servico_cliente">Cadastro de Clientes</h1>
+      <h1 id="servico_clientes">Cadastro de Clientes</h1>
       <form onSubmit={handleSubmit}>
         {/* Formulário de cadastro */}
         <fieldset className="principal_cliente1">
@@ -156,7 +156,7 @@ function Cadastro_clientes() {
             </label>
           </div>
           <div className="inputs1">
-            <input type="text" className="inputs" id="input1" />
+            <input type="text" className="inputs" id="input1c" />
             <input
               type="text"
               className="inputs"

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../src/styles/Financas.css";
+//import "../../src/styles/Financas.css";
 function Contas_financas() {
   return (
     <>

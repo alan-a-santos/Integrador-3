@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import "../../src/styles/Sessoes/sessoes.css";
+//import "../../src/styles/Sessoes/sessoes.css";
 
 function Pedido() {
   return (

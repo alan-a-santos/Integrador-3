@@ -12,6 +12,9 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+<head>
+  <meta httpEquiv="Content-Language" content="pt-BR" />
+</head>
 
 export const metadata: Metadata = {
   title: "D'mais Marmitaria",
@@ -24,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../src/styles/Preco_cardapio.css";
+//import "../../src/styles/Preco_cardapio.css";
 
 function Preço_cardapio() {
   return (

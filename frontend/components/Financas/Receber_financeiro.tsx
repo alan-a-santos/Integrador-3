@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "../../src/styles/Sessoes/financas.css";
+//import "../../src/styles/Sessoes/financas.css";
 import { server } from "@/service/server";
 
 interface cliente{

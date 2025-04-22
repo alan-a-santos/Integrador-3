@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import "../../src/styles/Clientes.css";
+//import "../../src/styles/Clientes.css";
 import { server } from "../../src/service/server";
 
 interface Clientes_Props {

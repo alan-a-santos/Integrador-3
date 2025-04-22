@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
-import "../../src/styles/Painel_pedido.css";
+//import "../../src/styles/Painel_pedido.css";
 import { server } from "@/service/server";
 
 

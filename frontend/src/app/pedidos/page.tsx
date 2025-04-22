@@ -7,8 +7,8 @@ function page() {
   return (
     <>
     <Superior/>
-    <Pedido/>
-    <Pedidos_lateral/>
+    {/* <Pedido/>
+    <Pedidos_lateral/> */}
     </>
   )
 }

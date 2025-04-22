@@ -1,6 +1,6 @@
 "use client";
 import React, { FormEvent, useRef, useState } from "react";
-import "../../src/styles/Sessoes/config.css";
+//import "../../src/styles/Sessoes/config.css";
 import { server } from "@/service/server";
 
 function Senha() {

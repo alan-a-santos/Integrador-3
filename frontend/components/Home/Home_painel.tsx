@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "../../src/styles/Home.css";
+//import "../../src/styles/Home.css";
 import { server } from "@/service/server";
 
 function Home_painel() {
