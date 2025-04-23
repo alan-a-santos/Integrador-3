@@ -8,10 +8,14 @@ const conexao = mysql.createPool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
+  port: Number(process.env.DB_PORT),
+  ssl: {
+    rejectUnauthorized: true // ou `false` se você tiver problemas com certificados
+  }
   });
 
   conexao.getConnection()
-  .then(() => console.log("✅ Conexão com o banco estabelecida!"))
+  .then(() => console.log("✅ Conexão com o banco estabelecida!", process.env.DB_DATABASE))
   .catch(err => console.error("❌ Erro na conexão com o banco:", err));
   
   export { conexao };
