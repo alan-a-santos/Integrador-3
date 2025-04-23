@@ -41,6 +41,8 @@ jobs:
     environment:
       name: 'Produção'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write  # Permissão para obter um ID Token
 
     steps:
       - name: Baixar artefato
