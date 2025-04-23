@@ -323,14 +323,14 @@ function Consulta_cliente() {
       </fieldset>
       <h2 id="obs">Observações</h2>
       <textarea
-        id="observa"
+        id="observacl"
         className="inputs"
         value={clienteInfo?.observacao || ""}
         readOnly
         ref={observacaoref}
       ></textarea>
       <div className="msg">
-        <button id="botao_cad1" onClick={handleSubmit}>
+        <button id="botao_cad1cl" onClick={handleSubmit}>
           Processar
         </button>
         {successMessage && (

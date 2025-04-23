@@ -211,7 +211,7 @@ function Cadastro_fitness() {
             </label>
             <input type="text" className="inputs" id="quanti" />
             <label htmlFor="" id="obs_pedido" className="labels">
-              Observações do Pedido n
+              Observações do Pedido
             </label>
             <textarea
               name=""

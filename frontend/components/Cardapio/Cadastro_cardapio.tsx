@@ -47,29 +47,29 @@ function Cadastro_cardapio() {
 
   return (
     <>
-      <div className="cliente">
-        <h1 id="servico_cardapio">Cadastro de Pratos</h1>
+      
+        <h1 id="servico_cardapiocp">Cadastro de Pratos</h1>
 
-        <fieldset className="principal_cardapio">
+        <fieldset className="principal_cardapiocp">
           <legend className="labels" id="legenda"></legend>
 
           <br />
-          <div className="labels1">
-            <label htmlFor="" className="labels" id="label1">
+          <div className="titulocc">
+            <label htmlFor="" className="labels" id="label1cp">
               Segmento
             </label>
-            <label htmlFor="" className="labels" id="label21">
+            <label htmlFor="" className="labels" id="label2cp">
               Categoria
             </label>
-            <label htmlFor="" className="labels" id="label3">
+            <label htmlFor="" className="labels" id="label3cp">
               Nome do Prato
             </label>
           </div>
 
-          <div className="inputs1">
+          <div className="inputs1cc">
             <select
               name=""
-              id="input0"
+              id="input1cp"
               className="inputs"
               value={segmento}
               onChange={segmentar}
@@ -79,7 +79,7 @@ function Cadastro_cardapio() {
             </select>
             <select
               name=""
-              id="input2"
+              id="input2cp"
               className="inputs"
               value={categoria}
               onChange={selecionar}
@@ -93,20 +93,21 @@ function Cadastro_cardapio() {
             <input
               type="text"
               name=""
-              id="input3"
+              id="input3cp"
               className="inputs"
               value={nome_prato}
               onChange={nomear}
             />
-            <button id="botao_cad1" onClick={enviar}>
+            <button id="botao_cad1cp" onClick={enviar}>
               Cadastrar
             </button>
+
             {successMessage && (
               <div className="success-message">{successMessage}</div>
             )}
           </div>
         </fieldset>
-      </div>
+  
     </>
   );
 }

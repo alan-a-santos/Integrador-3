@@ -322,14 +322,14 @@ function Atualiza_cliente() {
       </fieldset>
       <h2 id="obs">Observações</h2>
       <textarea
-        id="observa"
+        id="observacl"
         className="inputs"
         name="observacao"
         value={clienteInfo?.observacao || ""}
         onChange={handleInputChange}
       ></textarea>
       
-      <button className="inputs" id="botao_cad1" onClick={atualizarCliente}>Atualizar</button>
+      <button className="inputs" id="botao_cad1cl" onClick={atualizarCliente}>Atualizar</button>
       <div className="final">
       {successMessage && (<div className="success-message">{successMessage}</div> )}
       </div>

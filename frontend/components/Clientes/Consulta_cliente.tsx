@@ -264,7 +264,7 @@ function Consulta_cliente() {
       </fieldset>
       <h2 id="obs">Observações</h2>
       <textarea
-        id="observa"
+        id="observacl"
         className="inputs"
         value={clienteInfo?.observacao || ""}
         readOnly

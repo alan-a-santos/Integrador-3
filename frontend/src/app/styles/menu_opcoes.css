@@ -1,0 +1,66 @@
+.principal{
+    display: flex;
+    border: solid;
+    background-color: white;
+    border-color: darkcyan;
+    box-shadow: 0vh 0.5vh 1vh 0vh darkcyan;
+    border-radius: 0.5vh;
+    border-top: none;
+}
+.menu_cliente{
+    display: flex;
+    border: solid;
+    background-color: white;
+    border-color: darkblue;
+    box-shadow: 0vh 0.5vh 1vh 0vh darkblue;
+    border-radius: 0.5vh;
+    border-top: none;
+}
+.menu_pedidos{
+    display: flex;
+    border: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: white;
+    border-color: darkorange;
+    box-shadow: 0vh 0.5vh 0.5vh 0vh darkorange;
+    border-radius: 0.5vh;
+    border-top: none;
+}
+.menu_cardapios{
+    display: flex;
+    border: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: white;
+    border-color: brown;
+    box-shadow: 0vh 0.5vh 0.5vh 0vh brown;
+    border-radius: 0.5vh;
+    border-top: none;
+}
+.menu_financas{
+    display: flex;
+    border: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: white;
+    border-color: green;
+    box-shadow: 0vh 0.5vh 0.5vh 0vh green;
+    border-radius: 0.5vh;
+    border-top: none;
+}
+.menu_config{
+    display: flex;
+    border: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: white;
+    border-color: gray;
+    box-shadow: 0vh 0.5vh 0.5vh 0vh gray;
+    border-radius: 0.5vh;
+    border-top: none;
+}

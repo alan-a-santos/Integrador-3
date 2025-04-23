@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 //import "../../src/styles/Home.css";
 import { server } from "@/service/server";
+import Image from "next/image";
+import home_imagem from '../../public/image/Logo.jpeg'
 
 function Home_painel() {
   const [clientes, setClientes] = useState<string[]>([]);
@@ -68,33 +70,27 @@ function Home_painel() {
 
   return (
     <>
-      <div className="home">
-        <div className="home1">
-          <section className="home1_1">
+      <Image src={home_imagem} alt="Logo" width={400} height={400} className="logo_home" />
+      {/* <div className="home">
+        <div className="home1"> */}
+          {/* <section className="home1_1">
             <fieldset className="home1_1_1">
               <legend className="labels" id="leg1">
                 Clientes Ativos
               </legend>
-              <section className="div1">
-                {/* <fieldset className='field1'>
-                              <legend id='leg1_1'>Ativos</legend>
-                              <br />
-                           <label htmlFor="" id='ativos'>-</label>
-                           </fieldset> */}
-              </section>
-
-              <section className="div1">
-                <fieldset className="field2">
-                  <legend id="leg1_1">Quantidade</legend>
-                  <br />
-                  <label htmlFor="" id="tot">
+              
+              {/* <section className="home_div1">
+                <fieldset className="home_quant"> */}
+                  {/* <legend id="home_legenda_quant">Quantidade</legend> */}
+                  {/* <br />
+                  <label htmlFor="" id="quant_clientes">
                     {clientes.length}
                   </label>
                 </fieldset>
-              </section>
-            </fieldset>
-          </section>
-
+              </section> */} 
+            {/* </fieldset>
+          </section> */}
+{/* 
           <section className="home1_2">
             <fieldset className="home2_2_2">
               <legend className="labels" id="leg1">
@@ -131,7 +127,7 @@ function Home_painel() {
               </section>
             </fieldset>
           </section>
-        </div>
+        </div> */}
         {/* <fieldset className='home3_3_3'>
               <legend className='labels' id='leg3'>Histórico de Vendas Mensal</legend>
                   <select name="" id="mes" className='inputs'>
@@ -149,7 +145,7 @@ function Home_painel() {
                       <option value="12">Dezembro</option>
                   </select>
              </fieldset> */}
-      </div>
+      {/* </div> */}
     </>
   );
 }

@@ -37,7 +37,7 @@ function Clientes_lateral() {
     <>
       <div className="lateral_principal">
         
-        <fieldset className="lateral_cliente">
+        <fieldset className="menu_cliente">
         <a onClick={() => router.push('/clientes/cadastro')}>
             <Image src={img1} alt="" id="img1" className="icones" />
             <label htmlFor="" className="label_icones">
@@ -64,6 +64,9 @@ function Clientes_lateral() {
           </a>
           <a onClick={() => router.push('/home')}>
             <Image src={img5} alt="" id="img5c" className="icones" />
+            <label htmlFor="" className="label_icones">
+              Home
+            </label>
           </a>
         </fieldset>
       </div>

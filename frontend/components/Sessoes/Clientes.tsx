@@ -5,8 +5,8 @@ import React from "react";
 function Clientes() {
   return (
     <>
-      <div className="sessao_cliente">
-        <h1 id="texto_sessao">Gerenciamento de Clientes</h1>
+      <div className="faixa_servicos_clientes">
+        <h1 id="faixa_servicos_clientes">Gerenciamento de Clientes</h1>
       </div>
     </>
   );

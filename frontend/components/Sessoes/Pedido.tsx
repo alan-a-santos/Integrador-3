@@ -6,7 +6,7 @@ function Pedido() {
   return (
     <>
       <div className="sessao_pedido">
-        <h1>Gerenciamento de Pedidos</h1>
+        <h1 id='faixa_servicos_pedidos'>Gerenciamento de Pedidos</h1>
       </div>
     </>
   );

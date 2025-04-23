@@ -177,7 +177,7 @@ function Painel_pedidos() {
               ))}
             </select>
             <div id="detalhe">
-              <label htmlFor="" id="label_detalhe" className="labels">Detalhe do Pedido</label>
+              <label htmlFor="" id="legenda" className="labels">Detalhe do Pedido</label>
          </div>     
          <div>
               <textarea name="" id="detalhe_pedido" className="inputs"  value={detalhePedido}

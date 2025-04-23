@@ -1,0 +1,74 @@
+#servico_cardapiocp{
+    margin-top: 5vh;
+    color: brown;
+    margin-left: 35%;
+}
+.success-message{
+    margin-left: 3%;
+    margin-top: 10vh;
+    font-size: 6vh;
+    color: #C0732F;
+}
+.titulocp{
+    color: #2B4C5D;
+    margin-left: 3%;
+}
+.principal_cardapiocp{
+    margin-left: 5vh;
+    border: none;
+    margin-top: 2vh;
+
+}
+
+#input1cp{
+    width: 8vw;
+  
+}
+#label2cp{
+    margin-left: 4.5vw;
+}
+#label3cp{
+    margin-left: 8.5vw;
+}
+#input3cp{
+    width: 32vw;
+}
+#botao_cad1cp{
+    width: 10vw;
+    height: 4vh;
+    border-radius: 6px;
+    border: none;
+    background-color: #2B4C5D;
+    color: #f2f2f2;
+    font-size: 20px;
+
+    margin-left: 1vw;
+    cursor: pointer;
+}
+#label11cp{
+    margin-left: 2.5vw;
+}
+#label12cp{
+    margin-left: 6.2vw;
+}
+#input12cp{
+    width: 35vw;
+}
+#label13cp{
+    margin-left: 31.5vw;
+}
+.resumocp{
+    display: flex;
+    margin-left: 3vw;
+    margin-top: 10vh;
+}
+#resumo{
+   margin-top: 0vh;
+   margin-left: -5.5vw;
+   width: 40vw;
+   height: 15vh;
+
+}
+#lbresumocp{
+   margin-top: -19vh;
+}

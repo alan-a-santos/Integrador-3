@@ -36,7 +36,7 @@ function Cardapio_lateral() {
   return (
     <>
       <div className="lateral_principal">
-        <fieldset className="lateral_cardapio">
+        <fieldset className="menu_cardapios">
         <a onClick={() => router.push('/cardapio/cadastro')}>
             <Image src={img1} alt="" id="img1" className="icones" />
             <label htmlFor="" className="label_icones">
@@ -56,6 +56,9 @@ function Cardapio_lateral() {
 
           <a onClick={() => router.push('/home')}>
             <Image src={img5} alt="" id="img5ca" className="icones" />
+            <label htmlFor="" className="label_icones">
+              Home
+            </label>
           </a>
         </fieldset>
       </div>

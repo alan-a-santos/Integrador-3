@@ -118,14 +118,13 @@ function Receber_financeiro() {
   };
 
   return (
-    <>
-      <div className="clientefin">
-        <div className="div1">
-          <label htmlFor="listagem" className="labels" id="nomes">
-            Nome dos Clientes
+    <>   
+        <div className="cliente_pagar">
+          <label htmlFor="" className="labels" id="servico_financas">
+           Recebimento de Valores
           </label>
-        </div>
-        <div className="div2">
+        <fieldset id="recebe_financa">
+          <label htmlFor="" className="labels">Nome do Cliente</label>
           <select
             name="listagem"
             id="listagem"
@@ -140,12 +139,12 @@ function Receber_financeiro() {
             ))}
           </select>
 
-          <label htmlFor="lista-pedidos" className="labels" id="pendentes">
+          <label htmlFor="lista-pedidos" className="labels" id="pendentesf">
             Pedidos Pendentes de Pagamento
           </label>
           <select
             name="lista-pedidos"
-            id="lista-pedidos"
+            id="lista_pedidosf"
             className="inputs"
             multiple
             onChange={handleSelectChangep}
@@ -159,16 +158,17 @@ function Receber_financeiro() {
             ))}
           </select>
 
-          <label htmlFor="saldo-devedor" className="labels" id="devedor">
+          <label htmlFor="saldo-devedor" className="labels" id="devedorf">
             Saldo Devedor
           </label>
           <input
             type="text"
-            id="total"
+            id="totalf"
             value={`R$ ${total.toFixed(2)}`}
             className="inputs"
             readOnly
           />
+          </fieldset>
 
           <section className="s1">
             <button className="inputs" id="pi" onClick={pgtopedido}>
@@ -179,7 +179,7 @@ function Receber_financeiro() {
             </button>
           </section>
         </div>
-      </div>
+
     </>
   );
 }

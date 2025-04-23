@@ -177,7 +177,7 @@ function Cadastro_marmitex() {
               readOnly
             />
             <label htmlFor="" id="obs_pedido" className="labels">
-              Observações do Pedido n
+              Observações do Pedido
             </label>
             <textarea
               name=""

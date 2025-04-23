@@ -6,7 +6,7 @@ function Cardapio() {
   return (
     <>
       <div className="sessao_cardapio">
-        <h1>Gerenciamento de Cardápios</h1>
+        <h1 id="faixa_servicos_cardapios">Gerenciamento de Cardápios</h1>
       </div>
     </>
   );

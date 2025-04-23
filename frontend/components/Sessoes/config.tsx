@@ -6,7 +6,7 @@ function Config() {
   return (
     <>
       <div className="sessao_config">
-        <h1>Configurações</h1>
+        <h1  id="faixa_servicos_config">Gerenciamento de Usuários</h1>
       </div>
     </>
   );

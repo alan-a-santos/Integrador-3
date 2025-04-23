@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, FormEvent, useState, useEffect } from "react";
-//import "../../src/styles/Clientes.css";
+
 import { server } from "../../src/service/server";
 import axios from "axios";
 
@@ -122,7 +122,7 @@ function Cadastro_clientes() {
 
   return (
     <div className="cliente">
-      <h1 id="servico_clientes">Cadastro de Clientes</h1>
+      <h1 id="servico_cliente">Cadastro de Clientes</h1>
       <form onSubmit={handleSubmit}>
         {/* Formulário de cadastro */}
         <fieldset className="principal_cliente1">
@@ -130,28 +130,28 @@ function Cadastro_clientes() {
             Dados Pessoais
           </legend>
           <div className="labels1">
-            <label className="labels" id="label1">
+            <label className="labels" id="label1cl">
               ID
             </label>
-            <label className="labels" id="label2000">
+            <label className="labels" id="label2000cl">
               Nome do Cliente
             </label>
-            <label className="labels" id="label3">
+            <label className="labels" id="label3cl">
               Nascimento
             </label>
-            <label className="labels" id="label4">
+            <label className="labels" id="label4cl">
               Telefone
             </label>
-            <label className="labels" id="label4_1">
+            <label className="labels" id="label4_1cl">
               Tipo
             </label>
-            <label className="labels" id="label5">
+            <label className="labels" id="label5cl">
               CPF/CNPJ
             </label>
-            <label className="labels" id="label5_1">
+            <label className="labels" id="label5_1cl">
               Email
             </label>
-            <label className="labels" id="label6">
+            <label className="labels" id="label6cl">
               Cadastro
             </label>
           </div>
@@ -160,7 +160,7 @@ function Cadastro_clientes() {
             <input
               type="text"
               className="inputs"
-              id="input2000"
+              id="input2c"
               ref={nomeref}
             />
             <input
@@ -202,22 +202,22 @@ function Cadastro_clientes() {
             Endereço
           </legend>
           <div className="labels1">
-            <label className="labels" id="label7">
+            <label className="labels" id="label7cl">
               CEP
             </label>
-            <label className="labels" id="label8">
+            <label className="labels" id="label8cl">
               Endereço
             </label>
-            <label className="labels" id="label9">
+            <label className="labels" id="label9cl">
               Nº
             </label>
-            <label className="labels" id="label10">
+            <label className="labels" id="label10cl">
               Complemento
             </label>
-            <label className="labels" id="label11">
+            <label className="labels" id="label11cl">
               Bairro
             </label>
-            <label className="labels" id="label12">
+            <label className="labels" id="label12cl">
               Cidade
             </label>
           </div>
@@ -267,11 +267,11 @@ function Cadastro_clientes() {
         <h2 id="obs">Observações</h2>
         <textarea
           className="inputs"
-          id="observa"
+          id="observacl"
           ref={observacaoref}
         ></textarea>
         <div className="msg">
-          <button id="botao_cad1">Processar</button>
+          <button id="botao_cad1cl">Processar</button>
           {successMessage && (
             <div className="success-message">{successMessage}</div>
           )}

@@ -37,7 +37,7 @@ function Financas_laterais() {
   return (
     <>
       <div className="lateral_principal">
-        <fieldset className="lateral_financas">
+        <fieldset className="menu_financas">
         <a onClick={() => router.push('/financas/recebimento')}>
             <Image src={img1} alt="" id="img1" className="icones" />
             <label htmlFor="" className="label_icones">
@@ -52,6 +52,9 @@ function Financas_laterais() {
            <label htmlFor="" className='label_icones'>Contas</label></a> */}
            <a onClick={() => router.push('/home')}>
             <Image src={img5} alt="" id="img5f" className="icones" />
+            <label htmlFor="" className="label_icones">
+              Home
+            </label>
           </a>
         </fieldset>
       </div>

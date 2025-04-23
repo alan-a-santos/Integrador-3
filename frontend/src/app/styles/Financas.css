@@ -1,0 +1,73 @@
+
+.cliente_pagar{
+   
+    display: flexbox;
+    margin-top: 5vh;
+  
+}
+ #servico_financas{
+    color: green;
+    margin-top: 0vw;
+    font-size: 2vw;
+    margin-left: 30%;
+
+}
+  #listagem{
+    margin-left: 0vw;
+    margin-bottom: 3vh;
+    width: 20vw;
+  }  
+
+
+#recebe_financa{
+    margin-left: 2vw;
+    margin-top: 0vw;
+    display: grid;padding-top: 2vh;
+    border: none;
+
+}
+#lista_pedidosf{
+    width: 40vw;
+    height: 35vh;
+    margin-bottom: 3vh;
+}
+#devedorf{
+    margin-top: -1vh;
+}
+#totalf{
+    margin-left: 29.5vw;
+    margin-top: -3vh;
+    width: 10vw;
+    font-weight: bold;
+    color: red;
+}
+#pi{
+    margin-left: 6vw;
+    margin-top: 5vh;
+    width:  15vw;
+    border-radius: 6px;
+    border: none;
+    background-color: #2B4C5D;
+    color: #f2f2f2;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+#pt{
+    margin-left: 2vw;
+    margin-top: 5vh;
+    width:  15vw;
+
+    border-radius: 6px;
+    border: none;
+    background-color: #2B4C5D;
+    color: #f2f2f2;
+    font-size: 20px;
+    cursor: pointer;
+}
+#pi:hover{
+    color: #C0732F;
+}
+#pt:hover{
+    color: #C0732F;
+}

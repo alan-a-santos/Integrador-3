@@ -1,9 +1,0 @@
-.principal{
-    display: flex;
-    border: solid;
-    background-color: white;
-    border-color: darkcyan;
-    box-shadow: 0vh 0.5vh 1vh 0vh darkcyan;
-    border-radius: 0.5vh;
-    border-top: none;
-}

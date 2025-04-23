@@ -16,7 +16,7 @@ function page() {
         <Pedido />
         <Pedidos_lateral />
         <Dados_clientes />
-        <h1 id="servico_pedido">Pedidos Marmitex</h1>
+        <h1 id="servico_pedidos">Pedidos Marmitex</h1>
         <Cadastro_marmitex />
       </ClienteProvider>
     </>

@@ -37,7 +37,7 @@ function Config_lateral() {
   return (
     <>
       <div className="lateral_principal">
-        <fieldset className="lateral_cardapio">
+        <fieldset className="menu_config">
         <a onClick={() => router.push('/config/usuarios')}>
             <Image src={img1} alt="" id="img1" className="icones" />
             <label htmlFor="" className="label_icones">
@@ -57,6 +57,9 @@ function Config_lateral() {
 
           <a onClick={() => router.push('/home')}>
             <Image src={img5} alt="" id="img5config" className="icones" />
+            <label htmlFor="" className="label_icones">
+              Home
+            </label>
           </a>
         </fieldset>
       </div>

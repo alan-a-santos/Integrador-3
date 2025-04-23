@@ -36,7 +36,7 @@ function Pedidos_lateral() {
   return (
     <>
       <div className="lateral_principal">
-        <fieldset className="lateral_pedidos">
+        <fieldset className="menu_pedidos">
         <a onClick={() => router.push('/pedidos/marmitex')}>
             <Image src={img1} alt="" id="img1" className="icones" />
             <label htmlFor="" className="label_icones">
@@ -59,6 +59,9 @@ function Pedidos_lateral() {
            <label htmlFor="" className='label_icones'>Histórico</label></a> */}
            <a onClick={() => router.push('/home')}>
             <Image src={img5} alt="" id="img5p" className="icones" />
+            <label htmlFor="" className="label_icones">
+              Home
+            </label>
           </a>
         </fieldset>
       </div>

@@ -30,16 +30,16 @@ function Usuarios() {
   return (
     <>
       <legend id="legenda">Cadastro de Usuários</legend>
-      <div className="geral">
-        <div className="label">
-          <label htmlFor="" className="labels" id="label1">
+      <div className="geralu">
+        <div className="labelu">
+          <label htmlFor="" className="labels" id="label1u">
             Usuário
           </label>
-          <label htmlFor="" className="labels" id="label2">
+          <label htmlFor="" className="labels" id="label2u">
             Senha
           </label>
         </div>
-        <div className="input">
+        <div className="inputu">
           <input
             type="text"
             name=""

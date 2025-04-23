@@ -33,16 +33,16 @@ function Senha() {
   return (
     <>
       <legend id="legenda">Atualizar Senha do Usuário</legend>
-      <div className="geral">
-        <div className="label">
-          <label htmlFor="" className="labels" id="label1">
+      <div className="geralu">
+        <div className="labelu">
+          <label htmlFor="" className="labels" id="label1u">
             Usuário
           </label>
-          <label htmlFor="" className="labels" id="label2s">
+          <label htmlFor="" className="labels" id="label2u">
             Senha
           </label>
         </div>
-        <div className="input">
+        <div className="inputu">
           <input
             type="text"
             name=""

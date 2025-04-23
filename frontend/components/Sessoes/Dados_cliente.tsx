@@ -76,13 +76,13 @@ function Dados_clientes() {
 
   return (
     <>
-      <fieldset className="principal_pedidos1">
+      <fieldset className="principal_pedidos1v">
         <legend className="labels" id="legenda">
           Dados do Cliente
         </legend>
 
         <div className="labels1">
-          <label htmlFor="" className="labels" id="label1">
+          <label htmlFor="" className="labels" id="label1dc">
             ID
           </label>
           <label htmlFor="" className="labels" id="label2dc">
@@ -100,7 +100,7 @@ function Dados_clientes() {
           <input
             type="text"
             name=""
-            id="input1"
+            id="input1dc"
             className="inputs"
             onChange={(e) => setid_cliente(e.target.value)}
             readOnly
@@ -108,7 +108,7 @@ function Dados_clientes() {
           />
           <select
             name=""
-            id="input2"
+            id="input2dc"
             className="inputs"
             value={selectedCliente}
             onChange={handleSelectChange}
@@ -123,14 +123,14 @@ function Dados_clientes() {
           <input
             type="text"
             name=""
-            id="input3"
+            id="input3dc"
             className="inputs"
             value={clienteInfo?.telefone || ""}
             readOnly
           />
           <input
             type="text"
-            id="input4"
+            id="input4dc"
             className="inputs"
             value={clienteInfo ? formatDate(clienteInfo.nascimento) : ""}
             readOnly
@@ -142,22 +142,22 @@ function Dados_clientes() {
         {/* <legend className='labels' id='legenda'>Endereço</legend> */}
 
         <div className="labels1">
-          <label htmlFor="" className="labels" id="label5">
+          <label htmlFor="" className="labels" id="label5dc">
             CEP
           </label>
-          <label htmlFor="" className="labels" id="label6">
+          <label htmlFor="" className="labels" id="label6dc">
             Endereço
           </label>
-          <label htmlFor="" className="labels" id="label7">
+          <label htmlFor="" className="labels" id="label7dc">
             Nº
           </label>
-          <label htmlFor="" className="labels" id="label8">
+          <label htmlFor="" className="labels" id="label8dc">
             Complemento
           </label>
-          <label htmlFor="" className="labels" id="label9">
+          <label htmlFor="" className="labels" id="label9dc">
             Bairro
           </label>
-          <label htmlFor="" className="labels" id="label10">
+          <label htmlFor="" className="labels" id="label10dc">
             Cidade
           </label>
         </div>
@@ -165,7 +165,7 @@ function Dados_clientes() {
         <div className="inputs1">
           <input
             type="text"
-            id="input5"
+            id="input5dc"
             className="inputs"
             value={
               clienteInfo && clienteInfo.cep ? formatCep(clienteInfo.cep) : ""
@@ -174,35 +174,35 @@ function Dados_clientes() {
           />
           <input
             type="text"
-            id="input6"
+            id="input6dc"
             className="inputs"
             value={clienteInfo?.rua || ""}
             readOnly
           />
           <input
             type="text"
-            id="input7"
+            id="input7dc"
             className="inputs"
             value={clienteInfo?.numero || ""}
             readOnly
           />
           <input
             type="text"
-            id="input8"
+            id="input8dc"
             className="inputs"
             value={clienteInfo?.complemento || ""}
             readOnly
           />
           <input
             type="text"
-            id="input9"
+            id="input9dc"
             className="inputs"
             value={clienteInfo?.bairro || ""}
             readOnly
           />
           <input
             type="text"
-            id="input10"
+            id="input10dc"
             className="inputs"
             value={clienteInfo?.cidade || ""}
             readOnly

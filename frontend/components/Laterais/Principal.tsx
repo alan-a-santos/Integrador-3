@@ -68,12 +68,15 @@ function Principal() {
         <a onClick={() => router.push('/config')}>
           <Image src={img5} alt="" id="img5" className="icones" />
           <label htmlFor="" className="label_icones">
-            Config.
+            Usuários
           </label>
         </a>
 
         <a onClick={handleLogout}> {/* Chama a função de logout */}
           <Image src={img6} alt="" id="img6" className="icones" />
+          <label htmlFor="" className="label_icones">
+            Sair
+          </label>
         </a>
       </fieldset>
     </div>

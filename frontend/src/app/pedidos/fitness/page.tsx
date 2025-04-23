@@ -16,7 +16,7 @@ function page() {
         <Pedido/>
         <Pedidos_lateral/>
         <Dados_clientes/>
-        <h1 id='servico_pedido'>Pedidos Fitness</h1>
+        <h1 id='servico_pedidos'>Pedidos Fitness</h1>
         <Cadastro_fitness/>
         </ClienteProvider>
     </>

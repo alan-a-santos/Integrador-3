@@ -10,11 +10,19 @@
 .label_icones{
   font-weight: bold;
   color: #2B4C5D;
+  cursor: pointer;
+  background-color: white;
+  margin-right: 3vw;
 }
 .icones{
   width: 2.5vw;
   height: 5vh;
   margin-left: 1vw;
+  margin-top: 0.2vh;
+  background-color: white;
+  cursor: pointer;
+}
+a{
   background-color: white;
 }
 
@@ -43,22 +51,32 @@
 @import "./styles/login.css";
 @import "./styles/superior.css";
 @import "./styles/faixas_servicos.css";
-@import "./styles/principal.css";
+@import "./styles/home_painel.css";
+@import'./styles/menu_opcoes.css';
+@import "./styles/Clientes.css";
+@import "./styles/Pedidos.css";
+@import "./styles/dados_clientes.css";
+@import "./styles/Painel_pedido.css";
+@import "./styles/Cadastro_cardapio.css";
+ @import "./styles/Financas.css";
+@import "./styles/usuarios.css"
+
+ 
 /* 
-  @import "./styles/Sessoes/config.css";
-  @import "./styles/Sessoes/dados_clientes.css";
+  ;
+  
   @import "./styles/Sessoes/financas.css";
   
   @import "./styles/Sessoes/pedidos.css";
   @import "./styles/Sessoes/sessoes.css";
 
-  @import "./styles/Cadastro_cardapio.css";
-  @import "./styles/Clientes.css";
-  @import "./styles/Financas.css";
+  
+
+
   @import "./styles/Historico_pedidos.css";
   @import "./styles/Laterais.css";
   @import "./styles/Home.css";
   @import "./styles/Montagem_cardapio.css";
   @import "./styles/Oferta_cardapio.css";
-  @import "./styles/Painel_pedido.css";
-  @import "./styles/Pedidos.css"; */
+ 
+  ; */

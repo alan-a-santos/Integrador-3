@@ -114,56 +114,38 @@ useEffect(() => {
     setprato("");
   }
 
-  console.log(categoria);
+
   return (
     <>
       <div className="cliente">
-        <h1 id="servico_cardapio">Disponibilização de Pratos</h1>
+        <h1 id="servico_cardapiocp">Disponibilização de Pratos</h1>
 
-        <fieldset className="principal_cardapio">
+        <fieldset className="principal_cardapiocp">
           <legend className="labels" id="legenda"></legend>
+
           <div className="labels1">
-            <label htmlFor="" className="labels" id="label0">Segmento</label>
-            <label htmlFor="" className="labels" id="label1">
-              Categoria
-            </label>
-            <label htmlFor="" className="labels" id="label2-1">
-              Descrição
-            </label>
+            <label htmlFor="" className="labels" id="label10cp">Segmento</label>
+            <label htmlFor="" className="labels" id="label11cp">Categoria</label>
+            <label htmlFor="" className="labels" id="label12cp">Descrição</label>
+            <label htmlFor="" className="labels" id="label13cp">Valor</label>
           </div>
 
           <div className="inputs1">
-            <select
-              name=""
-              id="input1"
-              className="inputs"
-              value={segmento}
-              onChange={segmentar}
-            >
+            <select  name=""  id="input10cp"  className="inputs"  value={segmento} onChange={segmentar}>
               <option value="">Segmento</option>
               <option value="marmitex">Marmitex</option>
               <option value="fitness">Fitness</option>
             </select>
-            <select
-              name=""
-              id="input2"
-              className="inputs"
-              value={categoria}
-              onChange={categorizar}
-            >
+
+            <select name="" id="input11cp"  className="inputs" value={categoria} onChange={categorizar}>
               <option value="">Categoria</option>
               <option value="Principal">Principal</option>
               <option value="Bebidas">Bebidas</option>
               <option value="Guarnições">Guarnições</option>
               <option value="Acompanhamento">Acompanhamento</option>
             </select>
-            <select
-              name=""
-              id="input3"
-              className="inputs"
-              value={prato}
-              onChange={pratos}
-            >
+
+            <select  name="" id="input12cp"  className="inputs"  value={prato}   onChange={pratos}>
               <option value="">Selecione uma Descrição</option>
               {descricoes.map((descricao, index) => (
                 <option key={index} value={descricao}>
@@ -171,34 +153,19 @@ useEffect(() => {
                 </option>
               ))}
             </select>
-          </div>
-        </fieldset>
-        <br />
-
-        <div id="nome_cardapio">
-          <div>
-            <label htmlFor="" className="labels" id="label5">
-              Valor
-            </label>
-          </div>
-          <div>
-            <input
-              type="text"
-              name=""
-              id="valor"
-              value={valor}
-              onChange={valores}
-              className="inputs"
-            />
-          </div>
-          <button id="botao_cad2" onClick={enviar}>
-            Ofertar
-          </button>
+              
+            <input type="text"  name="" id="valor"   value={valor}  onChange={valores}  className="inputs"/>
+          
+          
+          <button id="botao_cad1cp" onClick={enviar}> Ofertar </button>
         </div>
-        <div className="resumo">
-          <label htmlFor="" className="labels" id="lbresumo">Pratos do Dia</label>
+      </fieldset>
+
+        <div className="resumocp">
+              <label htmlFor="" className="labels" id="lbresumocp">Pratos do Dia</label>
               <textarea name="" id="resumo" className="inputs" value={resumo.join("\n")} readOnly></textarea>
-            </div>
+          </div>
+          
         {resposta && <p className="success-message">{resposta.mensagem}</p>}
       </div>
     </>

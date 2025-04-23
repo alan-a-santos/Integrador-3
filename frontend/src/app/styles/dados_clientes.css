@@ -1,0 +1,87 @@
+
+.principal_pedidos1v{
+    margin-top: 2vw;
+    margin-left: 3vw;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px #2B4C5D;
+    padding: 1vw;
+    width: 48vw;
+}
+.principal_cliente2{
+    margin-top: 1vw;
+    margin-left: 3vw;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px #2B4C5D;
+    padding: 1vw;
+    width: 86vw;
+}
+
+
+#input1dc{
+    width: 3vw;
+}
+#input2dc{
+    width: 25vw;
+    text-align: left;
+}
+#input3dc{
+    width: 7.5vw;
+}
+#input4dc{
+    width: 8vw;
+    padding-left: 10px;
+}
+#input5dc{
+    width: 6vw;
+}
+#input6dc{
+    width: 22vw;
+}
+#input7dc{
+    width: 4vw;
+}
+#input8dc{
+    width: 15vw;
+}
+#input9dc{
+    width: 15VW;
+}
+#input10dc{
+    width: 15VW;
+}
+
+
+#label2dc{
+    margin-left: 3.5vw;
+}
+#label3{
+    margin-left: 18.7vw;
+}
+#label4dc{
+    margin-left: 5.8vw;
+}
+#label5dc{
+    margin-left: 0vw;
+}
+#label6dc{
+    margin-left: 5.5vw;
+}
+#label7dc{
+    margin-left: 19.6vw;
+}
+#label8dc{
+    margin-left: 4.3vw;
+}
+#label9dc{
+    margin-left: 10.7vw;
+}
+#label10dc{
+    margin-left: 13.8vw;
+}
+#servico_pedidos{
+    color: orange;
+    margin-left: 35%;
+    margin-top: 3vh;
+}
