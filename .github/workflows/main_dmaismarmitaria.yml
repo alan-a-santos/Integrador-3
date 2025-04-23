@@ -3,7 +3,7 @@ name: Construir e implantar aplicativo estático no Azure Web App - dmaismarmita
 on:
   push:
     branches:
-      - principal
+      - main
 
 jobs:
   build:
