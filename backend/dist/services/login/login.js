@@ -18,7 +18,6 @@ class login_usuario {
         else {
             resposta = "Negado";
         }
-        console.log(resposta);
         return resposta;
     }
 }

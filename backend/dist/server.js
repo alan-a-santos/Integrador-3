@@ -10,6 +10,7 @@ const cors_1 = __importDefault(require("@fastify/cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const path_1 = __importDefault(require("path"));
 const static_1 = __importDefault(require("@fastify/static"));
+const fs_1 = __importDefault(require("fs"));
 dotenv_1.default.config({
     path: path_1.default.resolve(__dirname, '../.env'),
 });
@@ -29,9 +30,16 @@ server.register(static_1.default, {
 });
 // Fallback para index.html (SPA)
 server.setNotFoundHandler((req, reply) => {
-    reply.sendFile('index.html');
+    reply.type('text/html').sendFile('index.html');
 });
 const port = Number(process.env.PORT) || 8080;
+const frontendPath = path_1.default.join(__dirname, '../../frontend/out');
+if (!fs_1.default.existsSync(frontendPath)) {
+    console.error('❌ Pasta frontend/out não encontrada em:', frontendPath);
+}
+else {
+    console.log('✅ Pasta frontend/out encontrada em:', frontendPath);
+}
 const start = async () => {
     try {
         await server.listen({ port, host: '0.0.0.0' });

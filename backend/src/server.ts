@@ -4,6 +4,7 @@ import cors from '@fastify/cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import fastifyStatic from '@fastify/static';
+import fs from 'fs';
 
 dotenv.config({
   path: path.resolve(__dirname, '../.env'),
@@ -28,10 +29,20 @@ server.register(fastifyStatic, {
 
 // Fallback para index.html (SPA)
 server.setNotFoundHandler((req, reply) => {
-  reply.sendFile('index.html');
+  reply.type('text/html').sendFile('index.html');
 });
 
 const port = Number(process.env.PORT) || 8080;
+
+
+
+const frontendPath = path.join(__dirname, '../../frontend/out');
+
+if (!fs.existsSync(frontendPath)) {
+  console.error('❌ Pasta frontend/out não encontrada em:', frontendPath);
+} else {
+  console.log('✅ Pasta frontend/out encontrada em:', frontendPath);
+}
 
 const start = async (): Promise<void> => {
   try {

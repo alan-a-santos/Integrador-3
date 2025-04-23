@@ -1,9 +1,8 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.inicio = inicio;
-const server_1 = require("../server");
-async function inicio(fastify) {
-    server_1.server.get('/', async (request, reply) => {
-        reply.send({ message: 'Servidor funcionando corretamente no arquivo!' });
-    });
-}
+// import { server } from "../server";
+// import { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
+// export async function inicio(fastify: FastifyInstance) {
+//     server.get('/', async (request:FastifyRequest, reply:FastifyReply) => {
+//       reply.send({ message: 'Servidor funcionando corretamente no arquivo!' });
+//     });
+//   }

@@ -7,8 +7,8 @@
     "build": "npm run build:frontend && npm run build:backend",
     "build:frontend": "cd frontend && npm install && npm run build",
     "build:backend": "cd backend && npm install && tsc",
-
-    "start": "concurrently \"node backend/dist/server.js\" \"npx serve -s frontend/out -l 3000\""
+   "start_alte": "concurrently \"node backend/dist/server.js\" \"npx serve -s frontend/out -l 3000\"",
+   "start": "node backend/dist/server.js"
 
   },
   "devDependencies": {
