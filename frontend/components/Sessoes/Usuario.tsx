@@ -29,7 +29,7 @@ function Usuarios() {
 
   return (
     <>
-      <legend id="legenda">Cadastro de Usuários</legend>
+      <legend id="servico_cliente">Cadastro de Usuários</legend>
       <div className="geralu">
         <div className="labelu">
           <label htmlFor="" className="labels" id="label1u">

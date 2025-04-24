@@ -25,7 +25,11 @@
 a{
   background-color: white;
 }
+#legenda{
+  color: #C0732F;
+  font-size: 20px;
 
+}
 .inputs{
     border-radius: 5px;
     margin-right: 10px;

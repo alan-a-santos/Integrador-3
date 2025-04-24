@@ -20,5 +20,5 @@ const conexao = promise_1.default.createPool({
 });
 exports.conexao = conexao;
 conexao.getConnection()
-    .then(() => console.log("✅ Conexão com o banco estabelecida!", process.env.DB_DATABASE))
+    .then(() => console.log("✅ Conexão com o banco estabelecida!", process.env.DB_DATABASE, process.env.DB_USER))
     .catch(err => console.error("❌ Erro na conexão com o banco:", err));

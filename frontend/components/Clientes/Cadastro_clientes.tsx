@@ -156,7 +156,7 @@ function Cadastro_clientes() {
             </label>
           </div>
           <div className="inputs1">
-            <input type="text" className="inputs" id="input1c" />
+            <input type="text" className="inputs" id="input1c" readOnly/>
             <input
               type="text"
               className="inputs"
