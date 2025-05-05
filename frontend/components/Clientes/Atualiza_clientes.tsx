@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 //import "../../src/styles/Clientes.css";
 import { server } from "../../src/service/server";
@@ -22,11 +22,14 @@ interface Clientes_Props {
   cidade: string;
 }
 
+ 
 function Atualiza_cliente() {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [clientes, setClientes] = useState<Clientes_Props[]>([]);
   const [selectedCliente, setSelectedCliente] = useState<string>("");
   const [clienteInfo, setClienteInfo] = useState<Clientes_Props | null>(null);
+  
+ 
 
   useEffect(() => {
     nomes_clientes();
@@ -69,6 +72,8 @@ function Atualiza_cliente() {
     setClientes(response.data);
   }
 
+  
+
   async function handleSelectChange(
     event: React.ChangeEvent<HTMLSelectElement>
   ) {
@@ -88,6 +93,8 @@ function Atualiza_cliente() {
       } catch (error) {
         console.error("Erro ao buscar informações do cliente:", error);
       }
+      
+    
     }
   }
   const handleInputChange = (
@@ -119,6 +126,7 @@ function Atualiza_cliente() {
         console.error("Erro ao atualizar cliente:", error);
         await server.put("/clientes/atualiza", clienteInfo);
         setSuccessMessage("Não ha atulizações a serem realizadas !");
+
         setTimeout(() => {
           setSuccessMessage(null);
         }, 3000);
@@ -191,6 +199,7 @@ function Atualiza_cliente() {
             id="input102"
             className="inputs"
             value={selectedCliente}
+        
             onChange={handleSelectChange}
           >
             <option value="">Selecione um cliente</option>
@@ -205,6 +214,7 @@ function Atualiza_cliente() {
             id="input103"
             className="inputs"
             name="nascimento"
+        
             value={clienteInfo ? formatDateToInput(clienteInfo.nascimento) : ""}
             onChange={handleInputChange}
           />
@@ -328,11 +338,14 @@ function Atualiza_cliente() {
         value={clienteInfo?.observacao || ""}
         onChange={handleInputChange}
       ></textarea>
-      
-      <button className="inputs" id="botao_cad1cl" onClick={atualizarCliente}>Atualizar</button>
-      <div className="final">
-      {successMessage && (<div className="success-message">{successMessage}</div> )}
-      </div>
+       
+      <div >
+        <button className="inputs" id="botao_cad1cl" onClick={atualizarCliente}>Atualizar</button>
+          <div className="mensagem">
+            {successMessage && (<div className="success-message2">{successMessage}</div> )}
+        </div>
+      </div>  
+    
     </div>
   );
 }

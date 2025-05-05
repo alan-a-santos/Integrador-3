@@ -32,7 +32,7 @@ function Senha() {
 
   return (
     <>
-      <legend id="legenda">Atualizar Senha do Usuário</legend>
+      <legend id="servico_usuario">Atualizar Senha do Usuário</legend>
       <div className="geralu">
         <div className="labelu">
           <label htmlFor="" className="labels" id="label1u">

@@ -42,3 +42,10 @@
     font-size: 4vh;
     margin-top: 10vh;
 }
+#servico_usuario{
+    color: darkslategray;
+    margin-top: 2vw;
+    margin-left: 30%;
+    font-weight: bold;
+    font-size: 3vh;
+}

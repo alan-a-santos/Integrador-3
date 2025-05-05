@@ -55,6 +55,35 @@
     margin-left: 79vw;
     cursor: pointer;
 }
+.success-message{
+    margin-left: 4%;
+
+    font-size: 2vh;
+
+    color: red;
+}
+.success-message1{
+    margin-left: 4%;
+    margin-top: 0vh;
+    font-weight: bold;
+    font-size: 2vh;
+    color: red;
+}
+.success-message2{
+    margin-left: 4%;
+    margin-top: 0vh;
+    font-size: 2vh;
+    color: red;
+    font-weight: bold;
+    justify-items: center;
+}
+#msg{
+    display: flex;
+}
+
+.mensagem{
+    margin-top: -4vh;
+}
 
 #input1{
     width: 1.5vw;
@@ -390,23 +419,4 @@ Exclusão de Clientes
 #label312{
     margin-left: 13.5vw;
  
-}
-.success-message{
-    margin-left: 4%;
-    margin-top: -5vh;
-    font-size: 3vh;
-    color: #C0732F;
-}
-.success-message1{
-    margin-left: 4%;
-    margin-top: 0vh;
-    font-size: 3vh;
-    color: #C0732F;
-}
-#msg{
-    display: flex;
-}
-.final {
-    display: flex;
-    flex-direction: row;
 }

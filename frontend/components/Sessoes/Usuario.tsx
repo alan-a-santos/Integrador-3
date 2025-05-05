@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { FormEvent, useRef, useState } from "react";
 //import "../../src/styles/Sessoes/config.css";
 import { server } from "@/service/server";
@@ -29,7 +29,7 @@ function Usuarios() {
 
   return (
     <>
-      <legend id="servico_cliente">Cadastro de Usuários</legend>
+      <legend id="servico_usuario">Cadastro de Usuários</legend>
       <div className="geralu">
         <div className="labelu">
           <label htmlFor="" className="labels" id="label1u">

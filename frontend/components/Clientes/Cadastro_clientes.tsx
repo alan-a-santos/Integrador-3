@@ -270,12 +270,18 @@ function Cadastro_clientes() {
           id="observacl"
           ref={observacaoref}
         ></textarea>
-        <div className="msg">
+        {/* <div className="msg">
           <button id="botao_cad1cl">Processar</button>
           {successMessage && (
             <div className="success-message">{successMessage}</div>
           )}
+        </div> */}
+        <div >
+        <button id="botao_cad1cl">Processar</button>
+          <div className="mensagem">
+            {successMessage && (<div className="success-message2">{successMessage}</div> )}
         </div>
+      </div>  
       </form>
     </div>
   );
